@@ -1,0 +1,74 @@
+.feed-frame {
+  padding: 1.5em;
+}
+
+.square {
+  aspect-ratio: 1/1;
+}
+
+#loader {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.feed-card-specs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.react-emoji-button {
+  .react-emoji-count {
+    display: none;
+  }
+}
+.react-emoji-button:hover {
+  .react-emoji-count {
+    display: unset;
+  }
+}
+
+.feed-card-title {
+  margin: 5px;
+}
+
+.feed-card-user-image {
+  width: 2em;
+  border-radius: 1em;
+}
+
+.feed-user-date {
+  font-size: x-small;
+}
+
+.username-link {
+  text-decoration: none;
+}
+
+.profile-image {
+  width: 90%;
+  margin-left: 5%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.profile-username {
+  text-align: center;
+  color: white;
+}
+
+.profile-bio {
+  color: white;
+}
+
+.react-emoji-icon.liked {
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(blueviolet, 0.5));
+  filter: drop-shadow(2px 2px 1px rgba(blueviolet, 0.5));
+}
+
+.react-emoji-icon:hover {
+  transform: scale(1.5);
+}
