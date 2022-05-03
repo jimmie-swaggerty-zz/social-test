@@ -16,7 +16,7 @@ const FeedCard = (props) => {
         console.log(post)
         let typeData = post.reacts[type]
         console.log(typeData)
-        post.reacts[type][1] = !typeData[1]
+        post.reacts[type][1] = typeData[1]==true?false:true
         post.reacts[type][0] = typeData[1]?post.reacts[type][0]+1:post.reacts[type][0]-1
         return(dispatch({type: 'updatePost', payload:{postId:props.postId,post:post}})) 
     }
