@@ -17,6 +17,7 @@ const FeedCard = (props) => {
         let typeData = post.reacts[type]
         console.log(typeData)
         post.reacts[type][1] = !typeData[1]
+        post.reacts[type][0] = typeData[1]?post.reacts[type][0]+1:post.reacts[type][0]-1
         return(dispatch({type: 'updatePost', payload:{postId:props.postId,post:post}})) 
     }
 
@@ -51,11 +52,11 @@ const FeedCard = (props) => {
                                     <span className={`react-emoji-icon ${reacts?.like[1]?'liked':''}`} onClick={e=>{e.preventDefault(); react('like')}}>&#128513;</span>
                                     {/* <span className='react-emoji-count'>{reacts?.like[0]}</span> */}
                                 </span>
-                                <span className='react-emoji-button' title={`Pride ${reacts?.pride}`}>
+                                <span className='react-emoji-button' title={`Pride ${reacts?.pride[0]}`}>
                                     <span className={`react-emoji-icon ${reacts?.pride[1]?'liked':''}`} onClick={e=>{e.preventDefault(); react('pride')}}>&#127752;</span>
                                     {/* <span className='react-emoji-count'>{reacts?.pride[0]}</span> */}
                                 </span>
-                                <span className='react-emoji-button' title={`Liked ${reacts?.sad}`}>
+                                <span className='react-emoji-button' title={`Liked ${reacts?.sad[0]}`}>
                                     <span className={`react-emoji-icon ${reacts?.pride[1]?'liked':''}`} onClick={e=>{e.preventDefault(); react('sad')}}>&#128532;</span>
                                     {/* <span className='react-emoji-count'>{reacts?.sad[0]}</span> */}
                                 </span>

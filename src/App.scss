@@ -1,5 +1,5 @@
 .feed-frame {
-  padding: 1.5em;
+  padding: 0.75em;
 }
 
 .square {
@@ -64,11 +64,25 @@
   color: white;
 }
 
+.react-emoji-icon{
+    transition: all .2s ease-in-out; 
+}
 .react-emoji-icon.liked {
-  -webkit-filter: drop-shadow(2px 2px 1px rgba(blueviolet, 0.5));
-  filter: drop-shadow(2px 2px 1px rgba(blueviolet, 0.5));
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(blueviolet, 0.5));
+  filter: drop-shadow(2px 2px 2px rgba(blueviolet, 0.5));
 }
 
-.react-emoji-icon:hover {
-  transform: scale(1.5);
+.react-emoji-button:hover {
+  cursor: pointer;
+  .react-emoji-icon {
+    font-size:1.5em;
+  }
+}
+
+.nav-item,
+.navbar-brand {
+  a {
+    color: white !important;
+    text-decoration: none !important;
+  }
 }
